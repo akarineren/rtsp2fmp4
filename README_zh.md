@@ -1,6 +1,6 @@
 # rtsp2fmp4
 
-[English](https://github.com/yumexupanic/rtsp2fmp4) | [日本語](https://github.com/yumexupanic/rtsp2fmp4/blob/main/README_jp.md) | [简体中文](https://github.com/yumexupanic/rtsp2fmp4/blob/main/README_zh.md)
+[English](https://github.com/akarineren/rtsp2fmp4) | [日本語](https://github.com/akarineren/rtsp2fmp4/blob/main/README_jp.md) | [简体中文](https://github.com/akarineren/rtsp2fmp4/blob/main/README_zh.md)
 
 这是一个高性能的流媒体服务，让 rtsp 可以在浏览器中播放,支持 h264 和 h265。转换过程只会涉及到数据的解封装，不会进行重新转码等操作。
 
@@ -8,12 +8,7 @@
 
 ## 快速开始
 
-下载可执行文件，或者使用 docker。
-
-docker
-```
-docker run -it -d --name rtsp2fmp4 -p 6161:6161 yumexupanic/rtsp2fmp4
-```
+从 [Releases](https://github.com/akarineren/rtsp2fmp4/releases) 下载可执行文件。
 
 使用
 ```shell
@@ -35,7 +30,7 @@ ws://127.0.0.1:6161?url=rtsp://xxxx
 流媒体本身做了优化，数据流延迟可控制在 1s 左右。如果你使用的是 http 方式直接拉流，客户端播放器没有做任何优化，
 那么延迟可能会慢慢提升，播放器需要处理缓存逻辑。
 
-在浏览器中 fmp4 over http 最多同时有6路的限制。所以推荐使用 websocket 的方案，配合 [wsfmp4.js](https://github.com/yumexupanic/wsfmp4.js) SDK，延迟可控制在 1s 左右。
+在浏览器中 fmp4 over http 最多同时有6路的限制。所以推荐使用 websocket 的方案，配合 [wsfmp4.js](https://github.com/akarineren/wsfmp4.js) SDK，延迟可控制在 1s 左右。
 
 ## 为什么是 fmp4，而不是 flv
 

@@ -1,6 +1,6 @@
 # rtsp2fmp4
 
-[English](https://github.com/yumexupanic/rtsp2fmp4) | [日本語](https://github.com/yumexupanic/rtsp2fmp4/blob/main/README_jp.md) | [简体中文](https://github.com/yumexupanic/rtsp2fmp4/blob/main/README_zh.md)
+[English](https://github.com/akarineren/rtsp2fmp4) | [日本語](https://github.com/akarineren/rtsp2fmp4/blob/main/README_jp.md) | [简体中文](https://github.com/akarineren/rtsp2fmp4/blob/main/README_zh.md)
 
 h264とh265をサポートし、rtspをブラウザで再生できる高性能なストリーミングサービスです。 変換処理はデータのデカプセル化のみで、再トランスコードは行われません。
 
@@ -8,12 +8,7 @@ h264とh265をサポートし、rtspをブラウザで再生できる高性能�
 
 ## クイックスタート
 
-実行ファイルをダウンロードするか、dockerを使う。
-
-docker
-```shell
-docker run -it -d --name rtsp2fmp4 -p 6161:6161 yumexupanic/rtsp2fmp4
-```
+[Releases](https://github.com/akarineren/rtsp2fmp4/releases) から実行ファイルをダウンロードしてください。
 
 利用する
 ```shell
@@ -35,7 +30,7 @@ ws://127.0.0.1:6161?url=rtsp://xxxx
 ストリーミングメディア自体は最適化されており、データストリームの遅延は1秒程度に制御できます。 もし、httpで直接ストリームを引っ張ってきていて、クライアント・プレーヤーが最適化されていない場合、遅延は徐々に増加する可能性があります。
 httpを使用してストリームを直接プルしており、クライアント・プレーヤーが最適化されていない場合、レイテンシは徐々に増加する可能性があり、プレーヤーはキャッシュ・ロジックに対処する必要があります。
 
-ブラウザでは、http経由のfmp4は同時ストリーム数が6に制限されています。 そのため、 [wsfmp4.js](https://github.com/yumexupanic/wsfmp4.js) SDKを使用して、レイテンシを1秒前後に制御できる、ウェブソケットソリューションを使用することをお勧めします。
+ブラウザでは、http経由のfmp4は同時ストリーム数が6に制限されています。 そのため、 [wsfmp4.js](https://github.com/akarineren/wsfmp4.js) SDKを使用して、レイテンシを1秒前後に制御できる、ウェブソケットソリューションを使用することをお勧めします。
 
 ## なぜflvではなくfmp4なのか
 
